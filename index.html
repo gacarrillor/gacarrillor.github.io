@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>PyQGIS Developer Cookbook update and maintainance by gacarrillor</title>
+    <title>PyQGIS Developer Cookbook update and maintenance by gacarrillor</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-light.css">
@@ -15,8 +15,8 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>PyQGIS Developer Cookbook update and maintainance</h1>
-        <p>QGIS grant proposal 2016</p>
+        <h1>PyQGIS Developer Cookbook update and maintenance</h1>
+        <p>QGIS Grant Proposal 2016</p>
 
 
         <p class="view"><a href="https://github.com/gacarrillor">View My GitHub Profile</a></p>
@@ -26,35 +26,88 @@
         <p><strong>Date</strong> 2016/09/15<br>
 <strong>Author</strong> Germán Carrillo (<a href="https://github.com/gacarrillor" class="user-mention">@gacarrillor</a>)<br>
 <strong>Contact</strong> gcarrillo at linuxmail dot org<br>
-<strong>maintainer</strong> <a href="https://github.com/gacarrillor" class="user-mention">@gacarrillor</a><br>
+<strong>Maintainer</strong> <a href="https://github.com/gacarrillor" class="user-mention">@gacarrillor</a><br>
 <strong>Version</strong> QGIS 2.16.x and QGIS 3.0</p>
 
 <hr>
 
 <h3>
-<a id="proposal-description" class="anchor" href="#proposal-description" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Proposal description</h3>
+<a id="proposal-details" class="anchor" href="#proposal-details" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Proposal details</h3>
 
-<p>Testing...</p>
+<p>The PyQGIS Cookbook is a very important document for both new PyQGIS users and developers. However, it is not rare to read in forums or other community websites that something could not be found in the PyQGIS Cookbook or that a code snippet taken from there does not work. It can be because the user has no previous experience with Python and cannot resolve basic error messages, but it can also be due to lack of maintenance of the code snippets. </p>
+
+<p>I work with PyQGIS almost on a daily basis, which has allowed me to realize that there are confusing parts in the Python API. Things that simply do not work, things that do not work as expected, as documentation states, etc. Just to name some topics that could get into the PyQGIS Cookbook: how to run QGIS Processing algorithms from standalone PyQGIS scripts (I consider this to be very useful), a more detailed Function Editor explanation and examples, and how to access and make use of plugins' methods from the PyQGIS console. </p>
+
+<p>One example of user misunderstanding is how to run a standalone PyQGIS script on Windows, <a href="http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/intro.html#running-custom-applications">which is in fact covered</a>, but not clear enough for people learning PyQGIS because we still find <a href="http://gis.stackexchange.com/questions/208490/importerror-dll-load-failed-the-specified-procedure-could-not-be-found">questions about it</a>. I think "Hello World!" examples need to be given to users, and such initial step should not represent an obstacle for them but an invitation to keep learning. </p>
+
+<p>I am particularly interested in helping people to get started with PyQGIS, I would like to show new users/devs how simple scripts can make a difference in their workflows or in the QGIS GUI itself. Nonetheless, I can also understand and make improvements to more complex PyQGIS uses. For instance, I have answered questions relatedto QGIS-Processing that cannot be found in documentation, but require reading QGIS Processing code structure. </p>
+
+<p>I propose to:</p>
+
+<ul>
+<li>Check every code snippet and, if necessary, make changes to it, e.g., remove deprecated function calls, add comments, add alternatives, among others. </li>
+<li>Check every code snippet and notify QGIS devs (via issue tracker, mailing list, Gitter, etc.) and/or GeoAPI maintainers (direct e-mail) about any issue I find (e.g., non-working method, missing classes/functions, and the like).</li>
+<li>Present self-contained (ready to run) code examples. I think there could be a collapsible button (collapsed by default) that displays fully working code (with necessary imports, variable definitions, using perhaps its own memory layers, etc.). As an alternative, we could just show a link to a Gist page, to a file in a GitHub repository, or any other platform you consider. In principle, there would not be a self-contained code example for each code snippet, but I could aim to have one or two per section.</li>
+<li>Find a place for and document 20 (to say something) of the most-voted PyQGIS answers on GIS.SE (or the ones that QGIS community considers) into the PyQGIS Cookbook.</li>
+<li>Find a place for and document 5 (to say something) blog posts from QGIS devs into the PyQGIS Cookbook (QGIS devs could point me to those resources).</li>
+<li>Complete Spanish translation of the PyQGIS Cookbook (for QGIS v.2.x).</li>
+<li>Keep an eye on API changes for QGIS 3.0 and replace/adjust code snippets with the new Python API.</li>
+</ul>
+
+<p>It is unknown to me how different PyQGIS Cookbook versions are managed. I can maintain:</p>
+
+<ol>
+<li>A master version (pointing towards QGIS 3.0), and</li>
+<li>A '2.x' version that you choose between the latest 2.x release (e.g., 2.16.x) or the latest LTR (2.14.x).</li>
+</ol>
+
+<p>I'm aware of the <a href="https://github.com/qgis/QGIS-Enhancement-Proposals/issues/67">API Documentation Guidelines QEP</a> by Martin Dobias, which I find both necessary and complementary. Even though code snippets would be added to the API docs (according to that QEP), I still think the PyQGIS Cookbook is the documentation resource new users will want to read when starting to learn PyQGIS, and sooner or later will be guided (e.g., by the PyQGIS Cookbook itself) to the API docs. </p>
+
+<p>I am open to discuss about the scope of this proposal. If it is selected, I would like to get feedback about it before starting to work.</p>
 
 <h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a id="what-is-your-implementation-schedule--plan" class="anchor" href="#what-is-your-implementation-schedule--plan" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What is your implementation schedule / plan?</h3>
 
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
+<ul>
+<li>
+<p>Mid-October to mid-December (2 months): </p>
+
+<ul>
+<li>PyQGIS Cookbook for QGIS v2.x (you would choose between QGIS 2.16.x or 2.14.x):
+
+<ul>
+<li>Reviewed.</li>
+<li>Updated.</li>
+<li>With self contained code examples.</li>
+<li>With the chosen 20 code snippets from GIS.SE included.</li>
+<li>With the chosen 5 blog posts included.</li>
+<li>Translated into Spanish.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>January, February, and March (3 months): </p>
+
+<ul>
+<li> PyQGIS Cookbook for QGIS v3.0.</li>
+<li>Sections and code snippets updated.</li>
+</ul>
+</li>
+</ul>
+
+<p>Notes: </p>
+
+<ul>
+<li>I would expect to stop working on the 2.x version by mid-December and start working on the 3.0 (master branch) in January.</li>
+<li>If, for any reason, anything cannot be added to PyQGIS Cookbook for QGIS v.3.0, I will leave a list of missing things, so that after the grant programme, the community (and I'm there) can complete it. </li>
+<li>I would not expect to translate PyQGIS Cookbook for QGIS 3.0 because I will be focused on covering the new API.</li>
+</ul>
 
 <h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating pages manually</h3>
+<a id="how-am-i-qualified-to-do-this" class="anchor" href="#how-am-i-qualified-to-do-this" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How am I qualified to do this?</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can @mention a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
+<p>I hold a MSc. in Geoinformatics from the University of Münster (Germany), I'm a <a href="https://github.com/qgis/QGIS/blob/master/doc/CONTRIBUTORS">QGIS contributor</a> (due to bug fixes sent years ago as C++ patches), I'm an active member of GIS StackExchange, particularily in <a href="http://gis.stackexchange.com/search?tab=votes&amp;q=%5Bpyqgis%5D%20user:4972">PyQGIS-related questions</a>, I'm one of the administrators of <a href="http://geotux.tuxfamily.org">GeoTux</a> (a website to promote and share knowledge on FOSS4G), I'm the author of <a href="http://plugins.qgis.org/plugins/user/gcarrillo/">four QGIS plugins</a> and have contributed to <a href="https://github.com/sourcepole/qgis-wps-client/blob/master/doAbout.py#L45">QGIS WPS</a> and <a href="https://github.com/albertferras/simplipy/graphs/contributors">Simplipy</a> plugins. I enjoy helping people to discover how powerful PyQGIS is (and have the patience for that), I enjoy sharing my work with the community, I enjoy learning from other people's code (even if it's C++ code). I once even met QGIS core devs at the Linux Hotel in Essen, 2012 (unfortunately couldn't met Martin nor Anita there). I use QGIS every time I can, even as a platform for a <a href="http://geotux.tuxfamily.org/index.php/en/component/k2/item/298-navigation-dipole-calculus-gizeitgeist-2012">couple</a> of <a href="http://blog.52north.org/2012/10/04/full-streaming-wps-near-real-time-geoprocessing-with-wps/">experiments</a>. And finally, and most important, I would love to work for QGIS!</p>
       </section>
       <footer>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
